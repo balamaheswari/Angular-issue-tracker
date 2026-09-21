@@ -1,0 +1,39 @@
+<div class="create-issue">
+  <h1>Create Issue</h1>
+  <p>Create a new issue for your project.</p>
+
+  <form [formGroup]="issueForm" (ngSubmit)="onSubmit()">
+
+    <label>Title</label>
+    <input
+      type="text"
+      formControlName="title"
+      placeholder="Enter issue title"
+    />
+
+    <label>Description</label>
+    <textarea
+      formControlName="description"
+      placeholder="Enter issue description"
+    ></textarea>
+
+    <label>Priority</label>
+    <select formControlName="priority">
+      <option value="Low">Low</option>
+      <option value="Medium">Medium</option>
+      <option value="High">High</option>
+    </select>
+
+    <label>Assignee</label>
+    <input
+      type="text"
+      formControlName="assignee"
+      placeholder="Enter assignee name"
+    />
+
+    <button type="submit" [disabled]="issueForm.invalid">
+      Create Issue
+    </button>
+
+  </form>
+</div>

@@ -1,0 +1,77 @@
+<div class="login-page">
+  <div class="login-brand">
+    <div class="brand-icon">
+      <mat-icon>task_alt</mat-icon>
+    </div>
+
+    <h1>IssueTracker</h1>
+    <p>Manage your work. Track your progress. Deliver better.</p>
+  </div>
+
+  <mat-card class="login-card">
+    <div class="login-header">
+      <h2>Welcome back</h2>
+      <p>Sign in to continue to your workspace</p>
+    </div>
+
+    <!-- Reactive Login Form -->
+   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+      <!-- Email Field -->
+      <mat-form-field appearance="outline">
+        <mat-label>Email address</mat-label>
+
+        <mat-icon matPrefix>email</mat-icon>
+
+        <input
+          matInput
+          type="email"
+          placeholder="admin@test.com"
+          formControlName="email"
+        />
+
+        @if (loginForm.get('email')?.hasError('required')) {
+          <mat-error>Email is required</mat-error>
+        }
+
+        @if (loginForm.get('email')?.hasError('email')) {
+          <mat-error>Enter a valid email address</mat-error>
+        }
+      </mat-form-field>
+
+      <!-- Password Field -->
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+
+        <mat-icon matPrefix>lock</mat-icon>
+
+        <input
+          matInput
+          type="password"
+          placeholder="Enter your password"
+          formControlName="password"
+        />
+
+        @if (loginForm.get('password')?.hasError('required')) {
+          <mat-error>Password is required</mat-error>
+        }
+      </mat-form-field>
+
+      <!-- Login Button -->
+      <button
+        mat-flat-button
+        color="primary"
+        class="login-button"
+        type="submit"
+      >
+        Sign in
+        <mat-icon>arrow_forward</mat-icon>
+      </button>
+
+    </form>
+
+    <p class="login-footer">
+      IssueTracker · Project Management
+    </p>
+  </mat-card>
+</div>
