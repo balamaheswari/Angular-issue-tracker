@@ -1,10 +1,10 @@
 import { Component, inject } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { AuthService } from '../../../core/services/auth.service';
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './header.html',
   styleUrl: './header.css',
 })
@@ -12,7 +12,14 @@ export class Header {
   private authService = inject(AuthService);
   private router = inject(Router);
 
-  logout() {
+  userName = '';
+
+  constructor() {
+    const user = this.authService.getCurrentUser();
+    this.userName = user?.name ?? 'User';
+  }
+
+  logout(): void {
     this.authService.logout();
     this.router.navigate(['/login']);
   }

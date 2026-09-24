@@ -125,4 +125,23 @@ mat-form-field {
   .login-card {
     padding: 24px;
   }
+  /* .login-error {
+  margin: 0 0 16px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: #fee2e2;
+  color: #b91c1c;
+  font-size: 13px;
+  text-align: center;
+} */
+
+}
+.login-error {
+  margin: 0 0 16px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  background: #fee2e2;
+  color: #b91c1c;
+  font-size: 13px;
+  text-align: center;
 }

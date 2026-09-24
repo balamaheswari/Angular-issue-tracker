@@ -1,53 +1,120 @@
-<!-- <button mat-raised-button (click)="logout()">
-  Logout
-</button> -->
 <div class="dashboard">
+
   <div class="page-header">
     <div>
       <h1>Dashboard</h1>
       <p>Overview of your issue tracker</p>
     </div>
 
-    <button class="create-button" routerLink="/issues/create">
-  + Create Issue
-</button>
+    <button
+      class="create-button"
+      routerLink="/issues/create">
+      + Create Issue
+    </button>
   </div>
 
+
+  <!-- Summary Cards -->
+
   <div class="summary-cards">
+
     <div class="summary-card">
       <div class="card-label">Total Issues</div>
-      <div class="card-value">0</div>
-      <div class="card-description">All reported issues</div>
+      <div class="card-value">{{ totalIssues() }}</div>
+      <div class="card-description">
+        All reported issues
+      </div>
     </div>
+
 
     <div class="summary-card">
       <div class="card-label">Open Issues</div>
-      <div class="card-value">0</div>
-      <div class="card-description">Issues to be started</div>
+      <div class="card-value">{{ openIssues() }}</div>
+      <div class="card-description">
+        Issues to be started
+      </div>
     </div>
+
 
     <div class="summary-card">
       <div class="card-label">In Progress</div>
-      <div class="card-value">0</div>
-      <div class="card-description">Currently being worked on</div>
+      <div class="card-value">{{ inProgressIssues() }}</div>
+      <div class="card-description">
+        Currently being worked on
+      </div>
     </div>
+
 
     <div class="summary-card">
       <div class="card-label">Resolved</div>
-      <div class="card-value">0</div>
-      <div class="card-description">Successfully completed</div>
+      <div class="card-value">{{ resolvedIssues() }}</div>
+      <div class="card-description">
+        Successfully completed
+      </div>
     </div>
+
   </div>
+
+
+  <!-- Recent Issues -->
 
   <div class="recent-issues">
+
     <div class="section-header">
       <h2>Recent Issues</h2>
-      <span>No issues yet</span>
+
+      <a routerLink="/issues">
+        View All
+      </a>
     </div>
 
-    <div class="empty-state">
-      <h3>No issues found</h3>
-      <p>Create your first issue to see it here.</p>
-    </div>
+
+    @if (recentIssues().length === 0) {
+
+      <div class="empty-state">
+        <h3>No issues found</h3>
+        <p>
+          Create your first issue to see it here.
+        </p>
+      </div>
+
+    } @else {
+
+      <div class="recent-issue-list">
+
+        @for (issue of recentIssues(); track issue.id) {
+
+          <div class="recent-issue">
+
+            <div>
+              <h3>{{ issue.title }}</h3>
+
+              <p>
+                {{ issue.description }}
+              </p>
+            </div>
+
+
+            <div class="issue-info">
+
+              <span>
+                {{ issue.priority }}
+              </span>
+
+              <span>
+                {{ issue.status }}
+              </span>
+
+            </div>
+
+          </div>
+
+        }
+
+      </div>
+
+    }
+
   </div>
+
 </div>

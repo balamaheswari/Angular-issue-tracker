@@ -11,11 +11,25 @@
       placeholder="Enter issue title"
     />
 
+    @if (issueForm.get('title')?.touched && issueForm.get('title')?.hasError('required')) {
+      <small class="error-message">
+        Title is required.
+      </small>
+    }
+
+
     <label>Description</label>
     <textarea
       formControlName="description"
       placeholder="Enter issue description"
     ></textarea>
+
+    @if (issueForm.get('description')?.touched && issueForm.get('description')?.hasError('required')) {
+      <small class="error-message">
+        Description is required.
+      </small>
+    }
+
 
     <label>Priority</label>
     <select formControlName="priority">
@@ -24,12 +38,20 @@
       <option value="High">High</option>
     </select>
 
+
     <label>Assignee</label>
     <input
       type="text"
       formControlName="assignee"
       placeholder="Enter assignee name"
     />
+
+    @if (issueForm.get('assignee')?.touched && issueForm.get('assignee')?.hasError('required')) {
+      <small class="error-message">
+        Assignee is required.
+      </small>
+    }
+
 
     <button type="submit" [disabled]="issueForm.invalid">
       Create Issue

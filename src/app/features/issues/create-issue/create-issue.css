@@ -11,6 +11,12 @@ p {
   color: #6b7280;
   margin-bottom: 28px;
 }
+.error-message {
+  display: block;
+  margin-top: 5px;
+  color: #dc2626;
+  font-size: 13px;
+}
 
 form {
   display: flex;

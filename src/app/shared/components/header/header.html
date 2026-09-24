@@ -4,7 +4,9 @@
   </div>
 
   <div class="header-actions">
-    <span class="user-name">Admin User</span>
+   <a class="user-name" routerLink="/profile">
+  {{ userName }}
+</a>
 
     <button type="button" (click)="logout()">
       Logout

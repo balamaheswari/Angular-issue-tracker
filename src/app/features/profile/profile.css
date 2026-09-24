@@ -1,0 +1,39 @@
+.profile-page {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.profile-page h1 {
+  margin-bottom: 6px;
+}
+
+.profile-page > p {
+  color: #64748b;
+  margin-bottom: 24px;
+}
+
+.profile-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.profile-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile-row:last-child {
+  border-bottom: none;
+}
+
+.profile-row span {
+  color: #64748b;
+}
+
+.profile-row strong {
+  color: #172033;
+}

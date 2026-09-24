@@ -10,13 +10,81 @@
   ],
   "issues": [
     {
-      "title": "data not coming",
-      "description": "Data is not displaying on UI",
+      "title": "data is not fetching from API",
+      "description": "Data is not displaying in UI table ",
       "priority": "Medium",
+      "status": "Resolved",
+      "assignee": "kara",
+      "id": "8iY8Ikw14eU"
+    },
+    {
+      "title": "when i double click then only issues table displaying",
+      "description": "when i double click then only issues table displaying",
+      "priority": "Medium",
+      "status": "Resolved",
+      "assignee": "jhjkd",
+      "id": "l6xMiP6RnTA"
+    },
+    {
+      "title": "dataaa",
+      "description": "data not coming",
+      "priority": "Low",
+      "status": "In Progress",
+      "assignee": "bala",
+      "id": "dzCGnNqb3z0"
+    },
+    {
+      "title": "data is working  but ui is not good",
+      "description": "need to do some cosmetic setup",
+      "priority": "Low",
       "assignee": "bala",
       "status": "Open",
-      "createdAt": "2026-09-21T16:23:27.169Z",
-      "id": "nABZ4b9Mg8A"
+      "createdAt": "2026-09-22T11:58:51.337Z",
+      "id": "wkc7skI1IWg"
+    },
+    {
+      "title": "data is working  but ui is not good",
+      "description": "need to do some cosmetic setup",
+      "priority": "Low",
+      "assignee": "bala",
+      "status": "Open",
+      "createdAt": "2026-09-22T11:59:34.548Z",
+      "id": "Fs8lNTJ6U-s"
+    },
+    {
+      "title": "sdg",
+      "description": "dfb",
+      "priority": "Medium",
+      "assignee": "dfb",
+      "status": "Open",
+      "createdAt": "2026-09-22T11:59:56.272Z",
+      "id": "WvRAP7RQ0sU"
+    },
+    {
+      "title": "ghjh",
+      "description": "chgfh",
+      "priority": "Low",
+      "assignee": "dfs",
+      "status": "Open",
+      "createdAt": "2026-09-22T12:07:19.684Z",
+      "id": "gMOI2W4yhIs"
+    },
+    {
+      "title": "slow rendering ui",
+      "description": "gfbcv",
+      "priority": "Low",
+      "assignee": "kara",
+      "status": "Open",
+      "createdAt": "2026-09-22T12:36:01.470Z",
+      "id": "LOKd4J1KXME"
+    },
+    {
+      "title": "Ui look is not good",
+      "description": "in table viewall section aligned not correct",
+      "priority": "Medium",
+      "status": "In Progress",
+      "assignee": "bala",
+      "id": "kfk5GkI1PI0"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

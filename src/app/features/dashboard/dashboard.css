@@ -125,3 +125,51 @@
     grid-template-columns: 1fr;
   }
 }
+.section-header a {
+  text-decoration: none;
+  color: #1565c0;
+  font-weight: 600;
+}
+
+.recent-issue-list {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.recent-issue {
+  display: grid;
+  grid-template-columns: 1fr 180px;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+.recent-issue:last-child {
+  border-bottom: none;
+}
+
+.recent-issue h3 {
+  margin: 0 0 6px;
+  font-size: 15px;
+}
+
+.recent-issue p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.issue-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.issue-info span {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: #f3f4f6;
+  font-size: 12px;
+  font-weight: 600;
+}
