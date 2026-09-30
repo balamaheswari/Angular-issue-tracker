@@ -31,7 +31,7 @@ jobs:
         run: npm run build -- --base-href /Angular-issue-tracker/
 
       - name: Prepare GitHub Pages
-        run: cp dist/issue-tracker/index.html dist/issue-tracker/404.html
+        run: cp dist/issue-tracker/browser/index.html dist/issue-tracker/browser/404.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -39,7 +39,7 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/issue-tracker
+         path: dist/issue-tracker/browser
 
   deploy:
     environment:
